@@ -1,12 +1,12 @@
 # BOXSTARTER PREPARATION
 Set-WindowsExplorerOptions -EnableShowHiddenFilesFoldersDrives -EnableShowProtectedOSFiles -EnableShowFileExtensions
 
+cup chocolatey    --cacheLocation "$env:userprofile\AppData\Local\ChocoCache"
+
 # Workaround for issue #241
 # Source https://github.com/chocolatey/boxstarter/issues/241#issuecomment-336028348
 # Real fix: https://github.com/chocolatey/boxstarter/pull/479
 New-Item -Path "$env:userprofile\AppData\Local\ChocoCache" -ItemType directory -Force
-
-cinst 7zip --cacheLocation "$env:userprofile\AppData\Local\ChocoCache" however worked just fine.
 
 
 # Using 'cup' (choco upgrade) instead of 'cinst' (cup) to make the script idempotent
