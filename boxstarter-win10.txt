@@ -1,6 +1,14 @@
 # BOXSTARTER PREPARATION
 Set-WindowsExplorerOptions -EnableShowHiddenFilesFoldersDrives -EnableShowProtectedOSFiles -EnableShowFileExtensions
 
+# Workaround for issue #241
+# Source https://github.com/chocolatey/boxstarter/issues/241#issuecomment-336028348
+# Real fix: https://github.com/chocolatey/boxstarter/pull/479
+New-Item -Path "$env:userprofile\AppData\Local\ChocoCache" -ItemType directory -Force
+
+cinst 7zip --cacheLocation "$env:userprofile\AppData\Local\ChocoCache" however worked just fine.
+
+
 # Using 'cup' (choco upgrade) instead of 'cinst' (cup) to make the script idempotent
 # https://docs.chocolatey.org/en-us/choco/commands/upgrade
 
@@ -12,90 +20,112 @@ Enable-RemoteDesktop
 ### SWINSTALL ###
 
 # COLLABORATION
-cup anydesk
-cup discord
-cup slack
-cup teamviewer
-cup webex-meetings
-cup zoom
+cup anydesk         --cacheLocation "$env:userprofile\AppData\Local\ChocoCache"
+cup discord         --cacheLocation "$env:userprofile\AppData\Local\ChocoCache"
+cup slack           --cacheLocation "$env:userprofile\AppData\Local\ChocoCache"
+cup teamviewer      --cacheLocation "$env:userprofile\AppData\Local\ChocoCache"
+cup webex-meetings  --cacheLocation "$env:userprofile\AppData\Local\ChocoCache"
+cup zoom            --cacheLocation "$env:userprofile\AppData\Local\ChocoCache"
+
 
 # DEV TOOLS
-cup git --params "/GitAndUnixToolsOnPath"
-cup jetbrainstoolbox
-cup nodejs-lts                          # Uninstalled non-lts to get a stable version (for reveal.js)
+cup git                 --cacheLocation "$env:userprofile\AppData\Local\ChocoCache" --params "/GitAndUnixToolsOnPath"
+cup jetbrainstoolbox    --cacheLocation "$env:userprofile\AppData\Local\ChocoCache"
+cup nodejs-lts          --cacheLocation "$env:userprofile\AppData\Local\ChocoCache" # Uninstalled non-lts to get a stable version (for reveal.js)
+
 
 # FILEHANDLING
-cup totalcommander
+cup totalcommander  --cacheLocation "$env:userprofile\AppData\Local\ChocoCache"
+
 
 # FONTS
-cup jetbrainsmono
-cup sourcecodepro
+cup jetbrainsmono   --cacheLocation "$env:userprofile\AppData\Local\ChocoCache"
+cup sourcecodepro   --cacheLocation "$env:userprofile\AppData\Local\ChocoCache"
+
 
 # GRAPHICS
-cup darktable                           # Image tool
-cup digikam                             # Image tool looks better (v7.3.0)
-cup ffmpeg
-cup graphviz
-cup greenshot                           # Settings stored in C:\Users\%USERNAME%\AppData\Roaming\Greenshot\Greenshot.ini TODO => GH-dotfiles
-cup handbrake
-cup irfanview
-cup irfanview-shellextension
-cup irfanviewplugins
-cup obs-studio                          # Other video tools must not be running (EG Teams, VLC etc) as they block the install (Virtual Camera stuff)
-cup vlc --params "'/Language:en'"
-cup zeplin
+cup darktable       --cacheLocation "$env:userprofile\AppData\Local\ChocoCache" # Image tool
+cup digikam         --cacheLocation "$env:userprofile\AppData\Local\ChocoCache" # Image tool looks better (v7.3.0)
+cup ffmpeg          --cacheLocation "$env:userprofile\AppData\Local\ChocoCache"
+cup graphviz        --cacheLocation "$env:userprofile\AppData\Local\ChocoCache"
+cup greenshot       --cacheLocation "$env:userprofile\AppData\Local\ChocoCache"
+cup handbrake       --cacheLocation "$env:userprofile\AppData\Local\ChocoCache"
+cup irfanview       --cacheLocation "$env:userprofile\AppData\Local\ChocoCache"
+cup irfanview-shellextension    --cacheLocation "$env:userprofile\AppData\Local\ChocoCache"
+cup irfanviewplugins            --cacheLocation "$env:userprofile\AppData\Local\ChocoCache"    
+cup obs-studio      --cacheLocation "$env:userprofile\AppData\Local\ChocoCache"
+                            # Other video tools must not be running (EG Teams, VLC etc) as they block the install (Virtual Camera stuff)
+
+cup vlc             --cacheLocation "$env:userprofile\AppData\Local\ChocoCache" --params "'/Language:en'"
+cup zeplin          --cacheLocation "$env:userprofile\AppData\Local\ChocoCache"
+
 
 # LINUX
-cup etcher                              # Create bootable linux USB devices (NB.: The actual name is 'balenaEtcher')
-cup microsoft-windows-terminal
-cup rpi-imager
-cup rufus
-cup vcxsrv                              # WSL2 GUI - https://techcommunity.microsoft.com/t5/windows-dev-appconsult/running-wsl-gui-apps-on-windows-10/ba-p/1493242
-cup wsl2 --params /Retry:true	        # Fails at first install, must reboot and retry then the install is then ok
-                                        # Should be fixed by the retry parm for systems that did not have wsl1 installed first
-cup wsl-ubuntu-2004                     # Then manually launch "Ubuntu" to complete the setup, create user etc.
+cup etcher          --cacheLocation "$env:userprofile\AppData\Local\ChocoCache"
+                            # Create bootable linux USB devices (NB.: The actual name is 'balenaEtcher')
+                            
+cup microsoft-windows-terminal  --cacheLocation "$env:userprofile\AppData\Local\ChocoCache"
+cup rpi-imager      --cacheLocation "$env:userprofile\AppData\Local\ChocoCache"
+cup rufus           --cacheLocation "$env:userprofile\AppData\Local\ChocoCache"
+cup vcxsrv          --cacheLocation "$env:userprofile\AppData\Local\ChocoCache"
+                        # WSL2 GUI - https://techcommunity.microsoft.com/t5/windows-dev-appconsult/running-wsl-gui-apps-on-windows-10/ba-p/1493242
+                            
+cup wsl2            --cacheLocation "$env:userprofile\AppData\Local\ChocoCache" --params /Retry:true
+                        # Fails at first install, must reboot and retry then the install is then ok
+                        # Should be fixed by the retry parm for systems that did not have wsl1 installed first
+cup wsl-ubuntu-2004     --cacheLocation "$env:userprofile\AppData\Local\ChocoCache"
+                            # Then manually launch "Ubuntu" to complete the setup, create user etc.
+
 
 # NETWORK
-cup iperf3
-cup iperf2
-cup nmap
-cup postman
-cup putty.install
-cup telnet
-cup wireshark
-cup winpcap
-cup youtube-dl
+cup iperf3          --cacheLocation "$env:userprofile\AppData\Local\ChocoCache"
+cup iperf2          --cacheLocation "$env:userprofile\AppData\Local\ChocoCache"
+cup nmap            --cacheLocation "$env:userprofile\AppData\Local\ChocoCache"    
+cup postman         --cacheLocation "$env:userprofile\AppData\Local\ChocoCache"    
+cup putty.install   --cacheLocation "$env:userprofile\AppData\Local\ChocoCache"
+cup telnet          --cacheLocation "$env:userprofile\AppData\Local\ChocoCache"
+cup wireshark       --cacheLocation "$env:userprofile\AppData\Local\ChocoCache"
+cup winpcap         --cacheLocation "$env:userprofile\AppData\Local\ChocoCache"
+cup youtube-dl      --cacheLocation "$env:userprofile\AppData\Local\ChocoCache"
+
 
 # OFFICE
-cup adobereader
-cup office365business
+cup adobereader         --cacheLocation "$env:userprofile\AppData\Local\ChocoCache"
+cup office365business   --cacheLocation "$env:userprofile\AppData\Local\ChocoCache"
+
 
 # SECURITY
-cup bitwarden
+cup bitwarden       --cacheLocation "$env:userprofile\AppData\Local\ChocoCache"
+
 
 # SYSTEM TOOLS
-cup bluetoothview                       # Nirsoft tool
-cup carnac                              # https://github.com/Code52/carnac - display keyboard strokes (for video demoing)
-cup dotnet3.5
-cup gpu-z
-cup javaruntime                         # For freeplane
-cup hwinfo
-cup smartmontools
-cup sysinternals
+cup bluetoothview   --cacheLocation "$env:userprofile\AppData\Local\ChocoCache" # Nirsoft tool
+cup carnac          --cacheLocation "$env:userprofile\AppData\Local\ChocoCache" 
+                        # https://github.com/Code52/carnac - display keyboard strokes (for video demoing)
+cup dotnet3.5       --cacheLocation "$env:userprofile\AppData\Local\ChocoCache"
+cup gpu-z           --cacheLocation "$env:userprofile\AppData\Local\ChocoCache"
+cup javaruntime     --cacheLocation "$env:userprofile\AppData\Local\ChocoCache" # For freeplane
+cup hwinfo          --cacheLocation "$env:userprofile\AppData\Local\ChocoCache"
+cup smartmontools   --cacheLocation "$env:userprofile\AppData\Local\ChocoCache"    
+cup samsung-magician    --cacheLocation "$env:userprofile\AppData\Local\ChocoCache" # Triggers UI execution of the installer!
+cup sysinternals    --cacheLocation "$env:userprofile\AppData\Local\ChocoCache"
+
 
 # TEXT
-cup freeplane
+cup freeplane       --cacheLocation "$env:userprofile\AppData\Local\ChocoCache"
+
 Stop-Process -Name "notepad++"          # Upgrade NP++ is unsuccessful if app is running, killing it is safe as it recalls even unsaved documents :-)
-cup notepadplusplus
+cup notepadplusplus --cacheLocation "$env:userprofile\AppData\Local\ChocoCache"
+
 
 # WEB
-cup googlechrome
-cup hugo
+cup googlechrome    --cacheLocation "$env:userprofile\AppData\Local\ChocoCache"
+cup hugo            --cacheLocation "$env:userprofile\AppData\Local\ChocoCache"
 
 # WINDOWS UTILS
-cup powertoys
-cup sharpkeys.portable                  # Key remapping tool
-cup usbdeview                           # Nirsoft USB speed test tool
+cup powertoys           --cacheLocation "$env:userprofile\AppData\Local\ChocoCache"
+cup sharpkeys.portable  --cacheLocation "$env:userprofile\AppData\Local\ChocoCache" # Key remapping tool
+cup usbdeview           --cacheLocation "$env:userprofile\AppData\Local\ChocoCache" # Nirsoft USB speed test tool
 
 
 
@@ -108,5 +138,4 @@ cup usbdeview                           # Nirsoft USB speed test tool
 #cup keyboard-layout-creator
     # DEBUG cup keyboard-layout-creator --install-arguments="'/l*v c:\keyboard-layout-creator_msi_install.log'"
     # Show the requirement of dot net 2.0, a "Windows Feture"
-cup samsung-magician                    # Triggers UI execution of the installer!
 # cup mobaxterm                         # Not the PRO version, that's only available outside Choco :(
