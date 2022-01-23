@@ -27,10 +27,20 @@ To quickly get up and running with a new Windows box with a minimum of manual in
   - Set a password for the account
   
 - Launch boxstarter
-  - Either via an elevated PowerShell command
-    - Win X, A
-    - start https://boxstarter.org/package/url/?https://raw.githubusercontent.com/tveyben/boxstarter/main/boxstarter-win10.txt
-  - or paste the URL into a MS browser (not Chrome)
-    - https://boxstarter.org/package/url/?https://raw.githubusercontent.com/tveyben/boxstarter/main/boxstarter-win10.txt
+  - Either via PowerShell (Win x, i), then paste the following command
+    - `start https://boxstarter.org/package/url/?https://raw.githubusercontent.com/tveyben/boxstarter/main/boxstarter-win10.txt`
+  - Or paste the URL into a MS browser (not Chrome)
+    - `https://boxstarter.org/package/url/?https://raw.githubusercontent.com/tveyben/boxstarter/main/boxstarter-win10.txt`
+  - Then
+    - Select "Open" to open this file
+    - Select "Run" to execute the script
+  - Select "Yes" to allow Boxstarter.WebLaunch to make changes...
+  - Enter your account password so BoxStarter can reboot and login in again
+    - If you don't trust the script change your password after installation (eg. use a "throw away one time password")
+    - NB.: Password cannot be `blank`  :-)
+  - Sit back and enjoy the "working smart - not hard"
+  
+  
+
   
   
