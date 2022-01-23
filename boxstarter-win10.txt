@@ -24,14 +24,20 @@ cup anydesk         --cacheLocation "$env:userprofile\AppData\Local\ChocoCache"
 cup discord         --cacheLocation "$env:userprofile\AppData\Local\ChocoCache"
 cup slack           --cacheLocation "$env:userprofile\AppData\Local\ChocoCache"
 cup teamviewer      --cacheLocation "$env:userprofile\AppData\Local\ChocoCache"
-cup webex-meetings  --cacheLocation "$env:userprofile\AppData\Local\ChocoCache"
+
+cup webex-meetings  --cacheLocation "$env:userprofile\AppData\Local\ChocoCache" --ignore-checksums
+                      # As the URL of the installer is always the same https://akamaicdn.webex.com...,
+                      # there is no other solution than waiting the review of the new version. 
+                      # In other words, we cant publish immediately a new Chocolatey package when webex 
+                      # release a new version using a same URL but with a different checksum.
+                      
 cup zoom            --cacheLocation "$env:userprofile\AppData\Local\ChocoCache"
 
 
 # DEV TOOLS
 cup git                 --cacheLocation "$env:userprofile\AppData\Local\ChocoCache" --params "/GitAndUnixToolsOnPath"
 cup jetbrainstoolbox    --cacheLocation "$env:userprofile\AppData\Local\ChocoCache"
-cup nodejs-lts          --cacheLocation "$env:userprofile\AppData\Local\ChocoCache" # Uninstalled non-lts to get a stable version (for reveal.js)
+cup nodejs-lts          --cacheLocation "$env:userprofile\AppData\Local\ChocoCache" # reveal.js requires a stable version
 
 
 # FILEHANDLING
@@ -53,28 +59,32 @@ cup handbrake       --cacheLocation "$env:userprofile\AppData\Local\ChocoCache"
 cup irfanview       --cacheLocation "$env:userprofile\AppData\Local\ChocoCache"
 cup irfanview-shellextension    --cacheLocation "$env:userprofile\AppData\Local\ChocoCache"
 cup irfanviewplugins            --cacheLocation "$env:userprofile\AppData\Local\ChocoCache"    
-cup obs-studio      --cacheLocation "$env:userprofile\AppData\Local\ChocoCache"
-                            # Other video tools must not be running (EG Teams, VLC etc) as they block the install (Virtual Camera stuff)
+
+# OBS: Other video tools must not be running (EG Teams, VLC etc) as they block the install (Virtual Camera stuff)
+Stop-Process -Name "Teams"
+Stop-Process -Name "Vlc" 
+cup obs-studio      --cacheLocation "$env:userprofile\AppData\Local\ChocoCache" --forced --not-silent
 
 cup vlc             --cacheLocation "$env:userprofile\AppData\Local\ChocoCache" --params "'/Language:en'"
 cup zeplin          --cacheLocation "$env:userprofile\AppData\Local\ChocoCache"
 
 
 # LINUX
+# etcher: Create bootable linux USB devices (NB.: The actual name is 'balenaEtcher')
 cup etcher          --cacheLocation "$env:userprofile\AppData\Local\ChocoCache"
-                            # Create bootable linux USB devices (NB.: The actual name is 'balenaEtcher')
-                            
+
+Stop-Process -Name "WindowsTerminal" # Cannot be updated while running
 cup microsoft-windows-terminal  --cacheLocation "$env:userprofile\AppData\Local\ChocoCache"
+
 cup rpi-imager      --cacheLocation "$env:userprofile\AppData\Local\ChocoCache"
 cup rufus           --cacheLocation "$env:userprofile\AppData\Local\ChocoCache"
+
+# vcxsrv: For WSL2 GUI, https://techcommunity.microsoft.com/t5/windows-dev-appconsult/running-wsl-gui-apps-on-windows-10/ba-p/1493242
 cup vcxsrv          --cacheLocation "$env:userprofile\AppData\Local\ChocoCache"
-                        # WSL2 GUI - https://techcommunity.microsoft.com/t5/windows-dev-appconsult/running-wsl-gui-apps-on-windows-10/ba-p/1493242
-                            
 cup wsl2            --cacheLocation "$env:userprofile\AppData\Local\ChocoCache" --params /Retry:true
-                        # Fails at first install, must reboot and retry then the install is then ok
-                        # Should be fixed by the retry parm for systems that did not have wsl1 installed first
+
+# wsl-ubuntu-2004: Requires manual launch to complete the setup (create a user)
 cup wsl-ubuntu-2004     --cacheLocation "$env:userprofile\AppData\Local\ChocoCache"
-                            # Then manually launch "Ubuntu" to complete the setup, create user etc.
 
 
 # NETWORK
@@ -100,8 +110,10 @@ cup bitwarden       --cacheLocation "$env:userprofile\AppData\Local\ChocoCache"
 
 # SYSTEM TOOLS
 cup bluetoothview   --cacheLocation "$env:userprofile\AppData\Local\ChocoCache" # Nirsoft tool
+
+# carnac: Display keyboard strokes (for video demoing), https://github.com/Code52/carnac 
 cup carnac          --cacheLocation "$env:userprofile\AppData\Local\ChocoCache" 
-                        # https://github.com/Code52/carnac - display keyboard strokes (for video demoing)
+
 cup dotnet3.5       --cacheLocation "$env:userprofile\AppData\Local\ChocoCache"
 cup gpu-z           --cacheLocation "$env:userprofile\AppData\Local\ChocoCache"
 cup javaruntime     --cacheLocation "$env:userprofile\AppData\Local\ChocoCache" # For freeplane
@@ -114,7 +126,8 @@ cup sysinternals    --cacheLocation "$env:userprofile\AppData\Local\ChocoCache"
 # TEXT
 cup freeplane       --cacheLocation "$env:userprofile\AppData\Local\ChocoCache"
 
-Stop-Process -Name "notepad++"          # Upgrade NP++ is unsuccessful if app is running, killing it is safe as it recalls even unsaved documents :-)
+# notepad++: Upgrade NP++ is unsuccessful if app is running, killing it is safe as it recalls even unsaved documents :-)
+Stop-Process -Name "notepad++"
 cup notepadplusplus --cacheLocation "$env:userprofile\AppData\Local\ChocoCache"
 
 
@@ -133,7 +146,7 @@ cup usbdeview           --cacheLocation "$env:userprofile\AppData\Local\ChocoCac
 
 
 # DEPRECATED STUFF
-# cup jabra-direct
+# cup jabra-direct --ignore-checksum # same rootcause as 'webex-meetings'
 # cup aquasnap
 #cup keyboard-layout-creator
     # DEBUG cup keyboard-layout-creator --install-arguments="'/l*v c:\keyboard-layout-creator_msi_install.log'"
