@@ -38,7 +38,33 @@ To quickly get up and running with a new Windows box with a minimum of manual in
   - Enter your account password so BoxStarter can reboot and login in again
     - If you don't trust the script change your password after installation (eg. use a "throw away one time password")
     - NB.: Password cannot be `blank`  :-)
+  
 - Sit back and enjoy the "working smart - not hard"
+    - There will be a few reboots
+    - Some installers require GUI response to complete the installation
+      - ncap (wireshark)
+  - Other launch to allow configuration
+    - Discord    
+    - PowerToys
+    - Samsung Magician
+  
+  
+- Complete the WSL2/Ubuntu installation
+    - Launch "Ubuntu 20.04 LTS"
+    - Provide a "UNIX username" and a password
+
+# TODO
+  - Add user based configuration (aka dotfiles)
+  
+  - Complete the WSL setup
+    - Configure vcxsrv (for WSL2 GUI)
+    - Link to my *nix dotfiles repo
+  
+  
+  
+  
+
+  
   
   
 
