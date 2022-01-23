@@ -38,7 +38,7 @@ To quickly get up and running with a new Windows box with a minimum of manual in
   - Enter your account password so BoxStarter can reboot and login in again
     - If you don't trust the script change your password after installation (eg. use a "throw away one time password")
     - NB.: Password cannot be `blank`  :-)
-  - Sit back and enjoy the "working smart - not hard"
+- Sit back and enjoy the "working smart - not hard"
   
   
 
