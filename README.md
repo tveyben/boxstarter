@@ -1,7 +1,11 @@
 # Boxstarter
 To quickly get up and running with a new Windows box with a minimum of manual intervention needed
 
-#  How to use
+# Straight to the point (After
+Open this URL in a MS browser on the just installed Windows 10 box:  
+https://boxstarter.org/package/url/?https://raw.githubusercontent.com/tveyben/boxstarter/main/boxstarter-win10.txt
+
+#  TLDR; How to use
 - Install Windows 10 and go through the OOBE
   - Select Region
   - Select Keyboard Layout
