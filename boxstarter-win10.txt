@@ -63,6 +63,7 @@ choco upgrade handbrake       --cacheLocation "$env:userprofile\AppData\Local\Ch
 choco upgrade irfanview       --cacheLocation "$env:userprofile\AppData\Local\ChocoCache"
 choco upgrade irfanview-shellextension    --cacheLocation "$env:userprofile\AppData\Local\ChocoCache"
 choco upgrade irfanviewplugins            --cacheLocation "$env:userprofile\AppData\Local\ChocoCache"    
+# obs requires manuel handling, moved to last
 choco upgrade vlc             --cacheLocation "$env:userprofile\AppData\Local\ChocoCache" --params "'/Language:en'"
 choco upgrade zeplin          --cacheLocation "$env:userprofile\AppData\Local\ChocoCache"
 
@@ -88,7 +89,7 @@ choco upgrade wsl-ubuntu-2004     --cacheLocation "$env:userprofile\AppData\Loca
 # NETWORK
 choco upgrade iperf3          --cacheLocation "$env:userprofile\AppData\Local\ChocoCache"
 choco upgrade iperf2          --cacheLocation "$env:userprofile\AppData\Local\ChocoCache"
-choco upgrade nmap            --cacheLocation "$env:userprofile\AppData\Local\ChocoCache"    
+# nmap requires manuel handling, moved to last
 choco upgrade postman         --cacheLocation "$env:userprofile\AppData\Local\ChocoCache"    
 choco upgrade putty.install   --cacheLocation "$env:userprofile\AppData\Local\ChocoCache"
 choco upgrade telnet          --cacheLocation "$env:userprofile\AppData\Local\ChocoCache"
@@ -140,11 +141,14 @@ choco upgrade usbdeview           --cacheLocation "$env:userprofile\AppData\Loca
 
 
 # INSTALLERS THAT REQUIRE MANUEL INTERVENTION
+choco upgrade nmap            --cacheLocation "$env:userprofile\AppData\Local\ChocoCache"    
+
 # OBS: Other 'video-using' tools must not be running (eg.: Teams, VLC etc.) as they block the install (Virtual Camera stuff)
 Stop-Process -Name "Chrome"
 Stop-Process -Name "Teams"
 Stop-Process -Name "Vlc" 
 choco upgrade obs-studio      --cacheLocation "$env:userprofile\AppData\Local\ChocoCache" --forced --not-silent
+
 
 
 
