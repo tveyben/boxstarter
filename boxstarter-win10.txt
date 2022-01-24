@@ -117,7 +117,7 @@ choco upgrade gpu-z               --cacheLocation "$env:userprofile\AppData\Loca
 choco upgrade javaruntime         --cacheLocation "$env:userprofile\AppData\Local\ChocoCache" # For freeplane
 choco upgrade hwinfo              --cacheLocation "$env:userprofile\AppData\Local\ChocoCache"
 choco upgrade smartmontools       --cacheLocation "$env:userprofile\AppData\Local\ChocoCache"    
-choco upgrade samsung-magician    --cacheLocation "$env:userprofile\AppData\Local\ChocoCache" # Triggers UI execution of the installer!
+# samsung-magician requires manuel handling, moved to last
 choco upgrade sysinternals        --cacheLocation "$env:userprofile\AppData\Local\ChocoCache"
 
 
@@ -139,7 +139,7 @@ choco upgrade sharpkeys.portable  --cacheLocation "$env:userprofile\AppData\Loca
 choco upgrade usbdeview           --cacheLocation "$env:userprofile\AppData\Local\ChocoCache" # Nirsoft USB speed test tool
 
 
-# INSTALLERS THAT REQUIRE MANUEL INTERVENTION
+### INSTALLERS THAT REQUIRE MANUEL INTERVENTION
 choco upgrade nmap                --cacheLocation "$env:userprofile\AppData\Local\ChocoCache"    
 
 # OBS: Other 'video-using' tools must not be running (eg.: Teams, VLC etc.) as they block the install (Virtual Camera stuff)
@@ -148,6 +148,7 @@ Stop-Process -Name "Teams"
 Stop-Process -Name "Vlc" 
 choco upgrade obs-studio          --cacheLocation "$env:userprofile\AppData\Local\ChocoCache" --forced --not-silent
 
+choco upgrade samsung-magician    --cacheLocation "$env:userprofile\AppData\Local\ChocoCache" # Triggers UI execution of the installer!
 
 
 
