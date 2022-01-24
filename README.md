@@ -1,7 +1,7 @@
 # Boxstarter
 To quickly get up and running with a new Windows box with a minimum of manual intervention needed
 
-# Straight to the point (After
+# Straight to the point
 Open this URL in a MS browser on the just installed Windows 10 box:  
 https://boxstarter.org/package/url/?https://raw.githubusercontent.com/tveyben/boxstarter/main/boxstarter-win10.txt
 
