@@ -1,7 +1,7 @@
 # BOXSTARTER PREPARATION
 Set-WindowsExplorerOptions -EnableShowHiddenFilesFoldersDrives -EnableShowProtectedOSFiles -EnableShowFileExtensions
 
-choco upgrade chocolatey    --cacheLocation "$env:userprofile\AppData\Local\ChocoCache"
+choco upgrade chocolatey        --cacheLocation "$env:userprofile\AppData\Local\ChocoCache"
 
 # Workaround for issue #241
 # Source https://github.com/chocolatey/boxstarter/issues/241#issuecomment-336028348
@@ -24,18 +24,18 @@ Enable-RemoteDesktop
 ### SWINSTALL ###
 
 # COLLABORATION
-choco upgrade anydesk         --cacheLocation "$env:userprofile\AppData\Local\ChocoCache"
-choco upgrade discord         --cacheLocation "$env:userprofile\AppData\Local\ChocoCache"
-choco upgrade slack           --cacheLocation "$env:userprofile\AppData\Local\ChocoCache"
-choco upgrade teamviewer      --cacheLocation "$env:userprofile\AppData\Local\ChocoCache"
+choco upgrade anydesk             --cacheLocation "$env:userprofile\AppData\Local\ChocoCache"
+choco upgrade discord             --cacheLocation "$env:userprofile\AppData\Local\ChocoCache"
+choco upgrade slack               --cacheLocation "$env:userprofile\AppData\Local\ChocoCache"
+choco upgrade teamviewer          --cacheLocation "$env:userprofile\AppData\Local\ChocoCache"
 
-choco upgrade webex-meetings  --cacheLocation "$env:userprofile\AppData\Local\ChocoCache" --ignore-checksums
+choco upgrade webex-meetings      --cacheLocation "$env:userprofile\AppData\Local\ChocoCache" --ignore-checksums
                       # As the URL of the installer is always the same https://akamaicdn.webex.com...,
                       # there is no other solution than waiting the review of the new version. 
                       # In other words, we cant publish immediately a new Chocolatey package when webex 
                       # release a new version using a same URL but with a different checksum.
                       
-choco upgrade zoom            --cacheLocation "$env:userprofile\AppData\Local\ChocoCache"
+choco upgrade zoom                --cacheLocation "$env:userprofile\AppData\Local\ChocoCache"
 
 
 # DEV TOOLS
@@ -45,56 +45,56 @@ choco upgrade nodejs-lts          --cacheLocation "$env:userprofile\AppData\Loca
 
 
 # FILEHANDLING
-choco upgrade totalcommander  --cacheLocation "$env:userprofile\AppData\Local\ChocoCache"
+choco upgrade totalcommander      --cacheLocation "$env:userprofile\AppData\Local\ChocoCache"
 
 
 # FONTS
-choco upgrade jetbrainsmono   --cacheLocation "$env:userprofile\AppData\Local\ChocoCache"
+choco upgrade jetbrainsmono       --cacheLocation "$env:userprofile\AppData\Local\ChocoCache"
 
 
 # GRAPHICS
-choco upgrade darktable       --cacheLocation "$env:userprofile\AppData\Local\ChocoCache" # Image tool
-choco upgrade digikam         --cacheLocation "$env:userprofile\AppData\Local\ChocoCache" # Image tool looks better (v7.3.0)
-choco upgrade ffmpeg          --cacheLocation "$env:userprofile\AppData\Local\ChocoCache"
-choco upgrade graphviz        --cacheLocation "$env:userprofile\AppData\Local\ChocoCache"
-choco upgrade greenshot       --cacheLocation "$env:userprofile\AppData\Local\ChocoCache"
-choco upgrade handbrake       --cacheLocation "$env:userprofile\AppData\Local\ChocoCache"
-choco upgrade irfanview       --cacheLocation "$env:userprofile\AppData\Local\ChocoCache"
+choco upgrade darktable           --cacheLocation "$env:userprofile\AppData\Local\ChocoCache" # Image tool
+choco upgrade digikam             --cacheLocation "$env:userprofile\AppData\Local\ChocoCache" # Image tool looks better (v7.3.0)
+choco upgrade ffmpeg              --cacheLocation "$env:userprofile\AppData\Local\ChocoCache"
+choco upgrade graphviz            --cacheLocation "$env:userprofile\AppData\Local\ChocoCache"
+choco upgrade greenshot           --cacheLocation "$env:userprofile\AppData\Local\ChocoCache"
+choco upgrade handbrake           --cacheLocation "$env:userprofile\AppData\Local\ChocoCache"
+choco upgrade irfanview           --cacheLocation "$env:userprofile\AppData\Local\ChocoCache"
 choco upgrade irfanview-shellextension    --cacheLocation "$env:userprofile\AppData\Local\ChocoCache"
-choco upgrade irfanviewplugins            --cacheLocation "$env:userprofile\AppData\Local\ChocoCache"    
+choco upgrade irfanviewplugins    --cacheLocation "$env:userprofile\AppData\Local\ChocoCache"    
 # obs requires manuel handling, moved to last
-choco upgrade vlc             --cacheLocation "$env:userprofile\AppData\Local\ChocoCache" --params "'/Language:en'"
-choco upgrade zeplin          --cacheLocation "$env:userprofile\AppData\Local\ChocoCache"
+choco upgrade vlc                 --cacheLocation "$env:userprofile\AppData\Local\ChocoCache" --params "'/Language:en'"
+choco upgrade zeplin              --cacheLocation "$env:userprofile\AppData\Local\ChocoCache"
 
 
 # LINUX
 # etcher: Create bootable linux USB devices (NB.: The actual name is 'balenaEtcher')
-choco upgrade etcher          --cacheLocation "$env:userprofile\AppData\Local\ChocoCache"
+choco upgrade etcher              --cacheLocation "$env:userprofile\AppData\Local\ChocoCache"
 
 Stop-Process -Name "WindowsTerminal" # Cannot be updated while running
 choco upgrade microsoft-windows-terminal  --cacheLocation "$env:userprofile\AppData\Local\ChocoCache"
 
-choco upgrade rpi-imager      --cacheLocation "$env:userprofile\AppData\Local\ChocoCache"
-choco upgrade rufus           --cacheLocation "$env:userprofile\AppData\Local\ChocoCache"
+choco upgrade rpi-imager          --cacheLocation "$env:userprofile\AppData\Local\ChocoCache"
+choco upgrade rufus               --cacheLocation "$env:userprofile\AppData\Local\ChocoCache"
 
 # vcxsrv: For WSL2 GUI, https://techcommunity.microsoft.com/t5/windows-dev-appconsult/running-wsl-gui-apps-on-windows-10/ba-p/1493242
-choco upgrade vcxsrv          --cacheLocation "$env:userprofile\AppData\Local\ChocoCache"
-choco upgrade wsl2            --cacheLocation "$env:userprofile\AppData\Local\ChocoCache" --params /Retry:true
+choco upgrade vcxsrv              --cacheLocation "$env:userprofile\AppData\Local\ChocoCache"
+choco upgrade wsl2                --cacheLocation "$env:userprofile\AppData\Local\ChocoCache" --params /Retry:true
 
 # wsl-ubuntu-2004: Requires manual launch to complete the setup (create a user)
 choco upgrade wsl-ubuntu-2004     --cacheLocation "$env:userprofile\AppData\Local\ChocoCache"
 
 
 # NETWORK
-choco upgrade iperf3          --cacheLocation "$env:userprofile\AppData\Local\ChocoCache"
-choco upgrade iperf2          --cacheLocation "$env:userprofile\AppData\Local\ChocoCache"
+choco upgrade iperf3              --cacheLocation "$env:userprofile\AppData\Local\ChocoCache"
+choco upgrade iperf2              --cacheLocation "$env:userprofile\AppData\Local\ChocoCache"
 # nmap requires manuel handling, moved to last
-choco upgrade postman         --cacheLocation "$env:userprofile\AppData\Local\ChocoCache"    
-choco upgrade putty.install   --cacheLocation "$env:userprofile\AppData\Local\ChocoCache"
-choco upgrade telnet          --cacheLocation "$env:userprofile\AppData\Local\ChocoCache"
-choco upgrade wireshark       --cacheLocation "$env:userprofile\AppData\Local\ChocoCache"
-choco upgrade winpcap         --cacheLocation "$env:userprofile\AppData\Local\ChocoCache"
-choco upgrade youtube-dl      --cacheLocation "$env:userprofile\AppData\Local\ChocoCache"
+choco upgrade postman             --cacheLocation "$env:userprofile\AppData\Local\ChocoCache"    
+choco upgrade putty.install       --cacheLocation "$env:userprofile\AppData\Local\ChocoCache"
+choco upgrade telnet              --cacheLocation "$env:userprofile\AppData\Local\ChocoCache"
+choco upgrade wireshark           --cacheLocation "$env:userprofile\AppData\Local\ChocoCache"
+choco upgrade winpcap             --cacheLocation "$env:userprofile\AppData\Local\ChocoCache"
+choco upgrade youtube-dl          --cacheLocation "$env:userprofile\AppData\Local\ChocoCache"
 
 
 # OFFICE
@@ -103,35 +103,35 @@ choco upgrade office365business   --cacheLocation "$env:userprofile\AppData\Loca
 
 
 # SECURITY
-choco upgrade bitwarden       --cacheLocation "$env:userprofile\AppData\Local\ChocoCache"
+choco upgrade bitwarden           --cacheLocation "$env:userprofile\AppData\Local\ChocoCache"
 
 
 # SYSTEM TOOLS
-choco upgrade bluetoothview   --cacheLocation "$env:userprofile\AppData\Local\ChocoCache" # Nirsoft tool
+choco upgrade bluetoothview       --cacheLocation "$env:userprofile\AppData\Local\ChocoCache" # Nirsoft tool
 
 # carnac: Display keyboard strokes (for video demoing), https://github.com/Code52/carnac 
-choco upgrade carnac          --cacheLocation "$env:userprofile\AppData\Local\ChocoCache" 
+choco upgrade carnac              --cacheLocation "$env:userprofile\AppData\Local\ChocoCache" 
 
-choco upgrade dotnet3.5       --cacheLocation "$env:userprofile\AppData\Local\ChocoCache"
-choco upgrade gpu-z           --cacheLocation "$env:userprofile\AppData\Local\ChocoCache"
-choco upgrade javaruntime     --cacheLocation "$env:userprofile\AppData\Local\ChocoCache" # For freeplane
-choco upgrade hwinfo          --cacheLocation "$env:userprofile\AppData\Local\ChocoCache"
-choco upgrade smartmontools   --cacheLocation "$env:userprofile\AppData\Local\ChocoCache"    
+choco upgrade dotnet3.5           --cacheLocation "$env:userprofile\AppData\Local\ChocoCache"
+choco upgrade gpu-z               --cacheLocation "$env:userprofile\AppData\Local\ChocoCache"
+choco upgrade javaruntime         --cacheLocation "$env:userprofile\AppData\Local\ChocoCache" # For freeplane
+choco upgrade hwinfo              --cacheLocation "$env:userprofile\AppData\Local\ChocoCache"
+choco upgrade smartmontools       --cacheLocation "$env:userprofile\AppData\Local\ChocoCache"    
 choco upgrade samsung-magician    --cacheLocation "$env:userprofile\AppData\Local\ChocoCache" # Triggers UI execution of the installer!
-choco upgrade sysinternals    --cacheLocation "$env:userprofile\AppData\Local\ChocoCache"
+choco upgrade sysinternals        --cacheLocation "$env:userprofile\AppData\Local\ChocoCache"
 
 
 # TEXT
-choco upgrade freeplane       --cacheLocation "$env:userprofile\AppData\Local\ChocoCache"
+choco upgrade freeplane           --cacheLocation "$env:userprofile\AppData\Local\ChocoCache"
 
 # notepad++: Upgrade NP++ is unsuccessful if app is running, killing it is safe as it recalls even unsaved documents :-)
 Stop-Process -Name "notepad++"
-choco upgrade notepadplusplus --cacheLocation "$env:userprofile\AppData\Local\ChocoCache"
+choco upgrade notepadplusplus     --cacheLocation "$env:userprofile\AppData\Local\ChocoCache"
 
 
 # WEB
-choco upgrade googlechrome    --cacheLocation "$env:userprofile\AppData\Local\ChocoCache"
-choco upgrade hugo            --cacheLocation "$env:userprofile\AppData\Local\ChocoCache"
+choco upgrade googlechrome        --cacheLocation "$env:userprofile\AppData\Local\ChocoCache"
+choco upgrade hugo                --cacheLocation "$env:userprofile\AppData\Local\ChocoCache"
 
 # WINDOWS UTILS
 choco upgrade powertoys           --cacheLocation "$env:userprofile\AppData\Local\ChocoCache"
@@ -140,13 +140,13 @@ choco upgrade usbdeview           --cacheLocation "$env:userprofile\AppData\Loca
 
 
 # INSTALLERS THAT REQUIRE MANUEL INTERVENTION
-choco upgrade nmap            --cacheLocation "$env:userprofile\AppData\Local\ChocoCache"    
+choco upgrade nmap                --cacheLocation "$env:userprofile\AppData\Local\ChocoCache"    
 
 # OBS: Other 'video-using' tools must not be running (eg.: Teams, VLC etc.) as they block the install (Virtual Camera stuff)
 Stop-Process -Name "Chrome"
 Stop-Process -Name "Teams"
 Stop-Process -Name "Vlc" 
-choco upgrade obs-studio      --cacheLocation "$env:userprofile\AppData\Local\ChocoCache" --forced --not-silent
+choco upgrade obs-studio          --cacheLocation "$env:userprofile\AppData\Local\ChocoCache" --forced --not-silent
 
 
 
