@@ -13,6 +13,10 @@ New-Item -Path "$env:userprofile\AppData\Local\ChocoCache" -ItemType directory -
 # https://docs.chocolatey.org/en-us/choco/commands/upgrade
 
 
+# WINDOWS UPDATE
+Install-WindowsUpdate
+
+
 ### CONFIGURATION ###
 Enable-RemoteDesktop
 
