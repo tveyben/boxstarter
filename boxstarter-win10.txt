@@ -50,7 +50,6 @@ choco upgrade totalcommander  --cacheLocation "$env:userprofile\AppData\Local\Ch
 
 # FONTS
 choco upgrade jetbrainsmono   --cacheLocation "$env:userprofile\AppData\Local\ChocoCache"
-choco upgrade sourcecodepro   --cacheLocation "$env:userprofile\AppData\Local\ChocoCache"
 
 
 # GRAPHICS
@@ -154,9 +153,13 @@ choco upgrade obs-studio      --cacheLocation "$env:userprofile\AppData\Local\Ch
 
 
 # DEPRECATED STUFF
-# choco upgrade jabra-direct --ignore-checksum # same rootcause as 'webex-meetings'
 # choco upgrade aquasnap
+# choco upgrade jabra-direct --ignore-checksum # same rootcause as 'webex-meetings'
+
 #choco upgrade keyboard-layout-creator
     # DEBUG choco upgrade keyboard-layout-creator --install-arguments="'/l*v c:\keyboard-layout-creator_msi_install.log'"
     # Show the requirement of dot net 2.0, a "Windows Feture"
+
 # choco upgrade mobaxterm                         # Not the PRO version, that's only available outside Choco :(
+# choco upgrade sourcecodepro   --cacheLocation "$env:userprofile\AppData\Local\ChocoCache"
+
