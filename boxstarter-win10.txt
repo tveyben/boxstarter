@@ -9,7 +9,7 @@ choco upgrade chocolatey    --cacheLocation "$env:userprofile\AppData\Local\Choc
 New-Item -Path "$env:userprofile\AppData\Local\ChocoCache" -ItemType directory -Force
 
 
-# Using 'choco upgrade' (choco upgrade) instead of 'cinst' (choco upgrade) to make the script idempotent
+# Using 'choco upgrade' instead of 'choco install' to make the script idempotent
 # https://docs.chocolatey.org/en-us/choco/commands/upgrade
 
 
