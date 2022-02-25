@@ -42,6 +42,7 @@ choco upgrade zoom                --cacheLocation "$env:userprofile\AppData\Loca
 choco upgrade git                 --cacheLocation "$env:userprofile\AppData\Local\ChocoCache" --params "/GitAndUnixToolsOnPath"
 choco upgrade jetbrainstoolbox    --cacheLocation "$env:userprofile\AppData\Local\ChocoCache"
 choco upgrade nodejs-lts          --cacheLocation "$env:userprofile\AppData\Local\ChocoCache" # reveal.js requires a stable version
+choco install python3             --cacheLocation "$env:userprofile\AppData\Local\ChocoCache"
 
 
 # FILEHANDLING
