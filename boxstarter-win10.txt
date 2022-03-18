@@ -46,8 +46,7 @@ choco install python3             --cacheLocation "$env:userprofile\AppData\Loca
 
 
 # FILEHANDLING
-# TODO TC gets installed as 32 bit when 64 bit is expected (install manually until a solution is identified)
-# 2021-11-19: https://community.chocolatey.org/packages/TotalCommander
+# BOTH the 32 bit and the 64 bit binary is installed - but in the 32 bit location (c:\Program Files (x86)\totalcmd\)
 # choco upgrade totalcommander      --cacheLocation "$env:userprofile\AppData\Local\ChocoCache"
 
 
