@@ -121,6 +121,7 @@ choco upgrade hwinfo              --cacheLocation "$env:userprofile\AppData\Loca
 choco upgrade smartmontools       --cacheLocation "$env:userprofile\AppData\Local\ChocoCache"    
 # samsung-magician requires manuel handling, moved to last
 choco upgrade sysinternals        --cacheLocation "$env:userprofile\AppData\Local\ChocoCache"
+choco install windirstat          --cacheLocation "$env:userprofile\AppData\Local\ChocoCache"
 
 
 # TEXT
