@@ -43,6 +43,7 @@ choco upgrade git                 --cacheLocation "$env:userprofile\AppData\Loca
 choco upgrade jetbrainstoolbox    --cacheLocation "$env:userprofile\AppData\Local\ChocoCache"
 choco upgrade nodejs-lts          --cacheLocation "$env:userprofile\AppData\Local\ChocoCache" # reveal.js requires a stable version
 choco install python3             --cacheLocation "$env:userprofile\AppData\Local\ChocoCache"
+choco install s3browser           --cacheLocation "$env:userprofile\AppData\Local\ChocoCache"
 
 
 # FILEHANDLING
