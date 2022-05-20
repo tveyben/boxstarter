@@ -132,6 +132,9 @@ choco upgrade freeplane           --cacheLocation "$env:userprofile\AppData\Loca
 Stop-Process -Name "notepad++"
 choco upgrade notepadplusplus     --cacheLocation "$env:userprofile\AppData\Local\ChocoCache"
 
+# UTILITIES
+choco upgrade oldcalc             --cacheLocation "$env:userprofile\AppData\Local\ChocoCache"
+
 
 # WEB
 choco upgrade googlechrome        --cacheLocation "$env:userprofile\AppData\Local\ChocoCache"
