@@ -114,6 +114,7 @@ choco upgrade bitwarden           --cacheLocation "$env:userprofile\AppData\Loca
 
 # SYSTEM TOOLS
 choco upgrade bluetoothview       --cacheLocation "$env:userprofile\AppData\Local\ChocoCache" # Nirsoft tool
+choco install usbdeview           --cacheLocation "$env:userprofile\AppData\Local\ChocoCache" # Nirsoft tool
 
 # carnac: Display keyboard strokes (for video demoing), https://github.com/Code52/carnac 
 choco upgrade carnac              --cacheLocation "$env:userprofile\AppData\Local\ChocoCache" 
