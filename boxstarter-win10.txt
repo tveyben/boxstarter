@@ -52,7 +52,9 @@ choco install androidstudio             --cacheLocation "$env:userprofile\AppDat
 
 # FILEHANDLING
 # BOTH the 32 bit and the 64 bit binary is installed - but in the 32 bit location (c:\Program Files (x86)\totalcmd\)
-# choco upgrade totalcommander      --cacheLocation "$env:userprofile\AppData\Local\ChocoCache"
+choco upgrade totalcommander      --cacheLocation "$env:userprofile\AppData\Local\ChocoCache"
+# Quick Access Popup (a replacement for FileBoxExtender)
+choco install qap                 --cacheLocation "$env:userprofile\AppData\Local\ChocoCache"
 
 
 # FONTS
