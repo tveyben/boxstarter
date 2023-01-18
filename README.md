@@ -9,20 +9,23 @@ Handle to few installers that require manuel intervention (they are executed las
 
 #  TLDR; How to use
 - Install Windows 10 and go through the OOBE
-  - Select Region
+  - Continue in selected Languague = English (United States) = Yes
+  - Select Region (Must be done via the mouse as no keyboard knowledge exists)
   - Select Keyboard Layout
-  - SKIP Secondary keyboard layout
-  - Network connection
-  - ENABLE Allow PC to be discoverable
+  - Secondary keyboard layout = SKIP
+  - Get a drink (as Windows now does "important things" and reboots)
+  - Network connection (perhaps only occuring if using wifi, I was not getting prompted when using Etherent)
+    - Allow PC to be discoverable = ENABLE
+  - License Agreement = Accept
   - Setup = For personal use
   - Account = Offline account
-    - like old times - a completely standalone PC
-  - Sign in = Limited experience
-    - ignore the nudging to make an online account
-  - User account = <my initials>
-    - as this gets used for the name of the home folder and I don't want my full name for that
+    - Like "The Good Old Times" - a completely standalone PC
+  - Sign in = Limited Experience
+    - Ignore the nudging to make an online account
+  - User account = [my initials]
+    - As this gets used for the name of the home folder and I don't want my full name for that
   - No password
-    - to avoid the nonsense socalled "security questions"). Password will be set later *after* completing the installation
+    - To avoid the nonsense socalled "security questions". Password will be set later *after* completing the installation
   - Location usage = No
   - Find my device = No
   - Diagnostic data = Required only
@@ -30,6 +33,10 @@ Handle to few installers that require manuel intervention (they are executed las
   - Tailored experience = No
   - Advertising ID = No
   - Customise experience = Skip
+  - Lenovo: Protect your device = Skip (Presumably only applicable for Lenovo PCs?)
+  - Windows 11 free upgrade = Decline Upgrade (Maybe in a few years time  when it's stable and mature)
+  - Decline Upgrade once more (They're nudging quite hard...)
+  - Get another drink (as Windows now does more "important things" and reboots)
   - Set a password for the account
   
 - Launch boxstarter
