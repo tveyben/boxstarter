@@ -50,7 +50,8 @@ Handle to few installers that require manuel intervention (they are executed las
   - Select "Yes" to allow Boxstarter.WebLaunch to make changes...
   - Enter your account password so BoxStarter can reboot and login in again
     - If you don't trust the script change your password after installation (eg. use a "throw away one time password")
-    - NB.: Password cannot be `blank`  :-)
+      - NB.: Password cannot be `blank`  :-)
+    - Type ENTER to start the actual installation
   
 - Sit back and enjoy the "working smart - not hard"
     - There will be a few reboots
