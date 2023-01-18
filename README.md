@@ -3,7 +3,7 @@ To quickly get up and running with a new Windows box with a minimum of manual in
 
 # Straight to the point
 Open this URL in a MS browser on the just installed Windows 10 box:  
-https://boxstarter.org/package/url/?https://raw.githubusercontent.com/tveyben/boxstarter/main/boxstarter-win10.txt
+https://boxstarter.org/package/url?https://raw.githubusercontent.com/tveyben/boxstarter/main/boxstarter-win10.txt
 Wait ~1,5h
 Handle to few installers that require manuel intervention (they are executed last)
 
@@ -41,9 +41,9 @@ Handle to few installers that require manuel intervention (they are executed las
   
 - Launch boxstarter
   - Either via PowerShell (Win x, a), then paste the following command
-    - `start https://boxstarter.org/package/url/?https://raw.githubusercontent.com/tveyben/boxstarter/main/boxstarter-win10.txt`
+    - `start https://boxstarter.org/package/url?https://raw.githubusercontent.com/tveyben/boxstarter/main/boxstarter-win10.txt`
   - Or paste the URL into a MS browser (not Chrome)
-    - `https://boxstarter.org/package/url/?https://raw.githubusercontent.com/tveyben/boxstarter/main/boxstarter-win10.txt`
+    - `https://boxstarter.org/package/url?https://raw.githubusercontent.com/tveyben/boxstarter/main/boxstarter-win10.txt`
   - Then
     - Select "Open" to open this file
     - Select "Run" to execute the script
