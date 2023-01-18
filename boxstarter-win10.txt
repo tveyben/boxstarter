@@ -40,7 +40,7 @@ choco upgrade zoom
 
 
 # DEV TOOLS
-choco install -y autohotkey
+choco upgrade autohotkey
 choco upgrade git                        --params "/GitAndUnixToolsOnPath"
 choco upgrade jetbrainstoolbox
 choco upgrade nodejs-lts                 # reveal.js requires a stable version
