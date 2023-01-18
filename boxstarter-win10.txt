@@ -1,5 +1,5 @@
 # BOXSTARTER PREPARATION
-Set-WindowsExplorerOptions -ShowHiddenFilesFoldersDrives -ShowProtectedOSFiles -ShowFileExtensions
+Set-ExplorerOptions -ShowHiddenFilesFoldersDrives -ShowProtectedOSFiles -ShowFileExtensions
 
 choco upgrade chocolatey        --cacheLocation "$env:userprofile\AppData\Local\ChocoCache"
 
