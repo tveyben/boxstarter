@@ -40,7 +40,7 @@ Handle to few installers that require manuel intervention (they are executed las
   - Set a password for the account
   
 - Launch boxstarter
-  - Either via PowerShell (Win x, i), then paste the following command
+  - Either via PowerShell (Win x, a), then paste the following command
     - `start https://boxstarter.org/package/url/?https://raw.githubusercontent.com/tveyben/boxstarter/main/boxstarter-win10.txt`
   - Or paste the URL into a MS browser (not Chrome)
     - `https://boxstarter.org/package/url/?https://raw.githubusercontent.com/tveyben/boxstarter/main/boxstarter-win10.txt`
