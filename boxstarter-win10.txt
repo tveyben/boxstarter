@@ -29,7 +29,8 @@ choco upgrade discord             --cacheLocation "$env:userprofile\AppData\Loca
 choco upgrade slack               --cacheLocation "$env:userprofile\AppData\Local\ChocoCache"
 choco upgrade teamviewer          --cacheLocation "$env:userprofile\AppData\Local\ChocoCache"
 
-choco upgrade webex-meetings      --cacheLocation "$env:userprofile\AppData\Local\ChocoCache" --ignore-checksums
+# Not using webex anymore
+# choco upgrade webex-meetings      --cacheLocation "$env:userprofile\AppData\Local\ChocoCache" --ignore-checksums
                       # As the URL of the installer is always the same https://akamaicdn.webex.com...,
                       # there is no other solution than waiting the review of the new version. 
                       # In other words, we cant publish immediately a new Chocolatey package when webex 
@@ -43,19 +44,19 @@ choco install -y autohotkey             --cacheLocation "$env:userprofile\AppDat
 choco upgrade git                       --cacheLocation "$env:userprofile\AppData\Local\ChocoCache" --params "/GitAndUnixToolsOnPath"
 choco upgrade jetbrainstoolbox          --cacheLocation "$env:userprofile\AppData\Local\ChocoCache"
 choco upgrade nodejs-lts                --cacheLocation "$env:userprofile\AppData\Local\ChocoCache" # reveal.js requires a stable version
-choco install python3                   --cacheLocation "$env:userprofile\AppData\Local\ChocoCache"
-choco install s3browser                 --cacheLocation "$env:userprofile\AppData\Local\ChocoCache"
-choco install sqlitebrowser             --cacheLocation "$env:userprofile\AppData\Local\ChocoCache"
-choco install visualstudio2022community --cacheLocation "$env:userprofile\AppData\Local\ChocoCache"
-choco install qtcreator                 --cacheLocation "$env:userprofile\AppData\Local\ChocoCache"
-choco install androidstudio             --cacheLocation "$env:userprofile\AppData\Local\ChocoCache"
+choco upgrade python3                   --cacheLocation "$env:userprofile\AppData\Local\ChocoCache"
+choco upgrade s3browser                 --cacheLocation "$env:userprofile\AppData\Local\ChocoCache"
+choco upgrade sqlitebrowser             --cacheLocation "$env:userprofile\AppData\Local\ChocoCache"
+choco upgrade visualstudio2022community --cacheLocation "$env:userprofile\AppData\Local\ChocoCache"
+choco upgrade qtcreator                 --cacheLocation "$env:userprofile\AppData\Local\ChocoCache"
+choco upgrade androidstudio             --cacheLocation "$env:userprofile\AppData\Local\ChocoCache"
 
 
 # FILEHANDLING
 # BOTH the 32 bit and the 64 bit binary is installed - but in the 32 bit location (c:\Program Files (x86)\totalcmd\)
 choco upgrade totalcommander      --cacheLocation "$env:userprofile\AppData\Local\ChocoCache"
 # Quick Access Popup (a replacement for FileBoxExtender)
-choco install qap                 --cacheLocation "$env:userprofile\AppData\Local\ChocoCache"
+choco upgrade qap                 --cacheLocation "$env:userprofile\AppData\Local\ChocoCache"
 
 
 # FONTS
@@ -78,7 +79,7 @@ choco upgrade zeplin              --cacheLocation "$env:userprofile\AppData\Loca
 
 
 # LINUX
-# etcher: Create bootable linux USB devices (NB.: The actual name is 'balenaEtcher')
+# etcher: Creates bootable linux USB devices (NB.: The actual name is 'balenaEtcher')
 choco upgrade etcher              --cacheLocation "$env:userprofile\AppData\Local\ChocoCache"
 
 Stop-Process -Name "WindowsTerminal" # Cannot be updated while running
@@ -91,8 +92,8 @@ choco upgrade rufus               --cacheLocation "$env:userprofile\AppData\Loca
 choco upgrade vcxsrv              --cacheLocation "$env:userprofile\AppData\Local\ChocoCache"
 choco upgrade wsl2                --cacheLocation "$env:userprofile\AppData\Local\ChocoCache" --params /Retry:true
 
-# wsl-ubuntu-2004: Requires manual launch to complete the setup (create a user)
-choco upgrade wsl-ubuntu-2004     --cacheLocation "$env:userprofile\AppData\Local\ChocoCache"
+# wsl-ubuntu-2204: Requires manual launch to complete the setup (create a user)
+choco upgrade wsl-ubuntu-2204     --cacheLocation "$env:userprofile\AppData\Local\ChocoCache"
 
 
 # NETWORK
@@ -118,7 +119,7 @@ choco upgrade bitwarden           --cacheLocation "$env:userprofile\AppData\Loca
 
 # SYSTEM TOOLS
 choco upgrade bluetoothview       --cacheLocation "$env:userprofile\AppData\Local\ChocoCache" # Nirsoft tool
-choco install usbdeview           --cacheLocation "$env:userprofile\AppData\Local\ChocoCache" # Nirsoft tool
+choco upgrade usbdeview           --cacheLocation "$env:userprofile\AppData\Local\ChocoCache" # Nirsoft tool
 
 # carnac: Display keyboard strokes (for video demoing), https://github.com/Code52/carnac 
 choco upgrade carnac              --cacheLocation "$env:userprofile\AppData\Local\ChocoCache" 
@@ -130,7 +131,7 @@ choco upgrade hwinfo              --cacheLocation "$env:userprofile\AppData\Loca
 choco upgrade smartmontools       --cacheLocation "$env:userprofile\AppData\Local\ChocoCache"    
 # samsung-magician requires manuel handling, moved to last
 choco upgrade sysinternals        --cacheLocation "$env:userprofile\AppData\Local\ChocoCache"
-choco install windirstat          --cacheLocation "$env:userprofile\AppData\Local\ChocoCache"
+choco upgrade windirstat          --cacheLocation "$env:userprofile\AppData\Local\ChocoCache"
 
 
 # TEXT
