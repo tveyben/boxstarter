@@ -13,7 +13,8 @@ New-Item -Path "$env:userprofile\AppData\Local\ChocoCache" -ItemType directory -
 
 
 # WINDOWS UPDATE
-Install-WindowsUpdate
+# Must debug why this doe not work
+# Install-WindowsUpdate
 
 
 ### CONFIGURATION ###
