@@ -4,6 +4,12 @@ To quickly get up and running with a new Windows box with a minimum of manual in
 # Straight to the point
 Open this URL in a MS browser on the just installed Windows 10 box:  
 https://boxstarter.org/package/url?https://raw.githubusercontent.com/tveyben/boxstarter/main/boxstarter-win10.txt
+
+Use this until github raw fix their broksen cache handling (link above is not matching latest commit even after waiting the advertised 5 minutes!!!
+https://boxstarter.org/package/url?https://raw.githubusercontent.com/tveyben/boxstarter/0a8e638842f785064a365adaac95dfb5c793ba3a/boxstarter-win10.txt
+
+
+
 Wait ~1,5h
 Handle to few installers that require manuel intervention (they are executed last)
 
