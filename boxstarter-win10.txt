@@ -1,7 +1,6 @@
 # BOXSTARTER PREPARATION
-Set-ExplorerOptions -ShowHiddenFilesFoldersDrives -ShowProtectedOSFiles -ShowFileExtensions
+Set-WindowsExplorerOptions -EnableShowHiddenFilesFoldersDrives -EnableShowProtectedOSFiles -EnableShowFileExtensions
 
-choco upgrade chocolatey
 
 # Workaround for issue #241
 # Source https://github.com/chocolatey/boxstarter/issues/241#issuecomment-336028348
