@@ -1,4 +1,4 @@
-# BOXSTARTER PREPARATION ()
+# BOXSTARTER PREPARATION
 Set-WindowsExplorerOptions -EnableShowHiddenFilesFoldersDrives -EnableShowProtectedOSFiles -EnableShowFileExtensions
 
 
