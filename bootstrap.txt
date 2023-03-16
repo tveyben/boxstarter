@@ -44,6 +44,7 @@ choco upgrade autohotkey
 choco upgrade git                        --params "/GitAndUnixToolsOnPath"
 choco upgrade jetbrainstoolbox
 choco upgrade nodejs-lts                 # reveal.js requires a stable version
+choco upgrade python2
 choco upgrade python3
 choco upgrade s3browser
 choco upgrade sqlitebrowser
