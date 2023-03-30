@@ -123,6 +123,7 @@ choco upgrade bitwarden
 choco upgrade bluetoothview        # Nirsoft tool
 choco upgrade usbdeview            # Nirsoft tool
 choco install treesizefree
+choco install nettime
 
 # carnac: Display keyboard strokes (for video demoing), https://github.com/Code52/carnac
 choco upgrade carnac
