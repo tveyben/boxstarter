@@ -108,6 +108,7 @@ choco upgrade wireshark
 choco upgrade winpcap
 choco upgrade youtube-dl
 choco install tailscale
+choco install googledrive
 
 
 # OFFICE
