@@ -109,6 +109,7 @@ choco upgrade winpcap
 choco upgrade youtube-dl
 choco install tailscale
 choco install googledrive
+choco install filezilla
 
 
 # OFFICE
