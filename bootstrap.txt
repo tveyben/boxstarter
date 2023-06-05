@@ -120,6 +120,8 @@ choco upgrade office365business
 # SECURITY
 choco upgrade bitwarden
 
+# SOUND
+choco install mp3tag
 
 # SYSTEM TOOLS
 choco upgrade bluetoothview        # Nirsoft tool
