@@ -51,6 +51,7 @@ choco upgrade sqlitebrowser
 choco upgrade visualstudio2022community
 choco upgrade qtcreator
 choco upgrade androidstudio
+choco install subtitleedit
 
 
 # FILEHANDLING
