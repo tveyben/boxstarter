@@ -111,6 +111,7 @@ choco upgrade youtube-dl
 choco install tailscale
 choco install googledrive
 choco install filezilla
+choco install charles4             # Pops up a GUI, but does not require manual intervention
 
 
 # OFFICE
