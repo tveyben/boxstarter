@@ -117,6 +117,7 @@ choco install charles4             # Pops up a GUI, but does not require manual 
 # OFFICE
 choco upgrade adobereader
 choco upgrade office365business
+choco install sumatrapdf
 
 
 # SECURITY
