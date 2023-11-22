@@ -52,6 +52,7 @@ choco upgrade visualstudio2022community
 choco upgrade qtcreator
 choco upgrade androidstudio
 choco install subtitleedit
+choco install hxd
 
 
 # FILEHANDLING
