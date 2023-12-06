@@ -42,7 +42,9 @@ choco upgrade zoom
 # DEV TOOLS
 choco upgrade autohotkey
 choco upgrade git                        --params "/GitAndUnixToolsOnPath"
+choco install hxd
 choco upgrade jetbrainstoolbox
+choco install mitmproxy
 choco upgrade nodejs-lts                 # reveal.js requires a stable version
 choco upgrade python2
 choco upgrade python3
@@ -52,7 +54,6 @@ choco upgrade visualstudio2022community
 choco upgrade qtcreator
 choco upgrade androidstudio
 choco install subtitleedit
-choco install hxd
 
 
 # FILEHANDLING
