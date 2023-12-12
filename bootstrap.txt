@@ -44,6 +44,7 @@ choco upgrade autohotkey
 choco upgrade git                        --params "/GitAndUnixToolsOnPath"
 choco install hxd
 choco upgrade jetbrainstoolbox
+choco install meld
 choco install mitmproxy
 choco upgrade nodejs-lts                 # reveal.js requires a stable version
 choco upgrade python2
