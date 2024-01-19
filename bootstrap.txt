@@ -134,7 +134,7 @@ choco upgrade bluetoothview        # Nirsoft tool
 choco upgrade usbdeview            # Nirsoft tool
 choco install treesizefree
 choco install nettime
-choco install partitionwizard
+choco install partitionexpert
 
 # carnac: Display keyboard strokes (for video demoing), https://github.com/Code52/carnac
 choco upgrade carnac
