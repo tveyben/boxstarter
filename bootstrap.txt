@@ -43,26 +43,27 @@ choco upgrade zoom
 choco upgrade androidstudio
 choco upgrade autohotkey
 choco upgrade git                        --params "/GitAndUnixToolsOnPath"
-choco install hxd
+choco upgrade hxd
 choco upgrade jetbrainstoolbox
-choco install meld
-choco install mitmproxy
+choco upgrade meld
+choco upgrade mitmproxy
 choco upgrade nodejs-lts                 # reveal.js requires a stable version
-choco install plantuml
+choco upgrade plantuml
 choco upgrade python2
 choco upgrade python3
 choco upgrade qtcreator
 choco upgrade s3browser
 choco upgrade sqlitebrowser
-choco install subtitleedit
+choco upgrade subtitleedit
 choco upgrade visualstudio2022community
 
 
 # FILEHANDLING
+choco upgrade treesizefree
 # BOTH the 32 bit and the 64 bit binary is installed - but in the 32 bit location (c:\Program Files (x86)\totalcmd\)
 choco upgrade totalcommander
-# Quick Access Popup (a replacement for FileBoxExtender)
-choco upgrade qap
+# Quick Access Popup (a replacement for FileBoxExtender) Currently causing more trouble than valaue - I must find GOOD a replacement for FBExtender!)
+# choco upgrade qap
 
 
 # FONTS
@@ -112,16 +113,16 @@ choco upgrade telnet
 choco upgrade wireshark
 choco upgrade winpcap
 choco upgrade youtube-dl
-choco install tailscale
-choco install googledrive
-choco install filezilla
-choco install charles4             # Pops up a GUI, but does not require manual intervention
+choco upgrade tailscale
+choco upgrade googledrive
+choco upgrade filezilla
+choco upgrade charles4             # Pops up a GUI, but does not require manual intervention
 
 
 # OFFICE
 choco upgrade adobereader
 choco upgrade office365business
-choco install sumatrapdf
+choco upgrade sumatrapdf
 
 
 # SECURITY
@@ -133,10 +134,10 @@ choco install mp3tag
 # SYSTEM TOOLS
 choco upgrade bluetoothview        # Nirsoft tool
 choco upgrade usbdeview            # Nirsoft tool
-choco install treesizefree
-choco install nettime
-choco install partition-assistant-standard
-choco install partitionexpert
+choco upgrade treesizefree
+choco upgrade nettime
+choco upgrade partition-assistant-standard
+choco upgrade partitionexpert
 
 
 # carnac: Display keyboard strokes (for video demoing), https://github.com/Code52/carnac
