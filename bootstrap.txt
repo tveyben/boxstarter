@@ -59,9 +59,10 @@ choco upgrade visualstudio2022community
 
 
 # FILEHANDLING
-choco upgrade treesizefree
+choco install linkshellextension # TODO cannot 'drop' via TotalCommander, must use WinExplorer :(
 # BOTH the 32 bit and the 64 bit binary is installed - but in the 32 bit location (c:\Program Files (x86)\totalcmd\)
 choco upgrade totalcommander
+choco upgrade treesizefree
 # Quick Access Popup (a replacement for FileBoxExtender) Currently causing more trouble than valaue - I must find GOOD a replacement for FBExtender!)
 # choco upgrade qap
 
