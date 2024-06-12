@@ -42,9 +42,9 @@ Handle to few installers that require manuel intervention (they are executed las
   
 - Launch boxstarter
   - Either via PowerShell (Win x, a), then paste the following command
-    - `start https://boxstarter.org/package/url?https://raw.githubusercontent.com/tveyben/boxstarter/main/boxstarter-win10.txt`
+    - `start https://boxstarter.org/package/url?https://raw.githubusercontent.com/tveyben/boxstarter/main/bootstrap.txt`
   - Or paste the URL into a MS browser (not Chrome)
-    - `https://boxstarter.org/package/url?https://raw.githubusercontent.com/tveyben/boxstarter/main/boxstarter-win10.txt`
+    - `https://boxstarter.org/package/url?https://raw.githubusercontent.com/tveyben/boxstarter/main/bootstrap.txt`
   - Then
     - Select "Open" to open this file
     - Select "Run" to execute the script
