@@ -90,8 +90,9 @@ choco upgrade zeplin
 # etcher: Creates bootable linux USB devices (NB.: The actual name is 'balenaEtcher')
 choco upgrade etcher
 
-Stop-Process -Name "WindowsTerminal" # Cannot be updated while running
-choco upgrade microsoft-windows-terminal
+# Windows 11 defaults to using Terminal, thus stop Terminal <=> abort this script, not so good...
+# Stop-Process -Name "WindowsTerminal" # Cannot be updated while running
+# choco upgrade microsoft-windows-terminal
 
 choco upgrade rpi-imager
 choco upgrade rufus
