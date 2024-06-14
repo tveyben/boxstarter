@@ -188,7 +188,8 @@ Stop-Process -Name "Teams"
 Stop-Process -Name "Vlc"
 Stop-Process -Name "Slack"
 Stop-Process -Name "Creative Cloud"
-choco upgrade obs-studio           --force
+Stop-Process -Name "SamsungMagician"
+choco upgrade obs-studio --force
 # Use `--not-silent´ to identify what's blocking the install (and add the culprits to the above list of processes needing to be stopped before installing OBS)
 
 choco upgrade samsung-magician     # Triggers UI execution of the installer!
