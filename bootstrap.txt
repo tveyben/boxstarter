@@ -75,7 +75,10 @@ choco upgrade jetbrainsmono
 choco upgrade darktable            # Image tool
 choco upgrade digikam              # Image tool looks better (v7.3.0)
 choco upgrade ffmpeg
-choco upgrade graphviz
+
+# Fails - handle manually
+# choco upgrade graphviz
+
 choco upgrade greenshot
 choco upgrade handbrake
 choco upgrade irfanview
