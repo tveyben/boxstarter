@@ -116,7 +116,6 @@ choco upgrade postman
 choco upgrade putty.install
 choco upgrade telnet
 choco upgrade wireshark
-choco upgrade winpcap
 choco upgrade youtube-dl
 choco upgrade tailscale
 choco upgrade googledrive
