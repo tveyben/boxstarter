@@ -183,14 +183,25 @@ choco upgrade usbdeview            # Nirsoft USB speed test tool
 choco upgrade nmap
 
 # OBS: Other 'video-using' tools must not be running (eg.: Teams, VLC etc.) as they block the install (Virtual Camera stuff)
-Stop-Process -Name "Chrome"
-Stop-Process -Name "Teams"
-Stop-Process -Name "Vlc"
-Stop-Process -Name "Slack"
-Stop-Process -Name "Creative Cloud"
-Stop-Process -Name "SamsungMagician"
-choco upgrade obs-studio --force
-# Use `--not-silent´ to identify what's blocking the install (and add the culprits to the above list of processes needing to be stopped before installing OBS)
+# TIP: Use `--not-silent´ to identify what's blocking the install (and add the culprits to the above list of processes needing to be stopped before installing OBS)
+
+echo "Killing OBS blocking processes" 
+$array =  @("Chrome", "Teams", "Vlc", "Slack", "Creative Cloud", "SamsungMagician")
+foreach ($process in $array) {
+    if((get-process $process -ea SilentlyContinue) -eq $Null){ 
+        echo "Not Running : $process " 
+    } else { 
+        Stop-Process -Name $process
+        echo "KILLED      : $process "
+    }
+}
+# Stop-Process -Name "Chrome"
+# Stop-Process -Name "Teams"
+# Stop-Process -Name "Vlc"
+# Stop-Process -Name "Slack"
+# Stop-Process -Name "Creative Cloud"
+# Stop-Process -Name "SamsungMagician"
+# choco upgrade obs-studio --force
 
 choco upgrade samsung-magician     # Triggers UI execution of the installer!
 
