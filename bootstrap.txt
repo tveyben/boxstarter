@@ -101,11 +101,13 @@ choco upgrade rpi-imager
 choco upgrade rufus
 
 # vcxsrv: For WSL2 GUI, https://techcommunity.microsoft.com/t5/windows-dev-appconsult/running-wsl-gui-apps-on-windows-10/ba-p/1493242
+#Win11 includes WSLg, thus vcxsr should no longer be required (to be tested)
 choco upgrade vcxsrv
 choco upgrade wsl2                 --params /Retry:true
 
 # wsl-ubuntu-2204: Requires manual launch to complete the setup (create a user)
-choco upgrade wsl-ubuntu-2204
+# Moved to seperate installation outside boxstarter as it stopped working in Win11
+# choco upgrade wsl-ubuntu-2204
 
 
 # NETWORK
@@ -137,11 +139,12 @@ choco install mp3tag
 
 # SYSTEM TOOLS
 choco upgrade bluetoothview        # Nirsoft tool
-choco upgrade usbdeview            # Nirsoft tool
-choco upgrade treesizefree
 choco upgrade nettime
 choco upgrade partition-assistant-standard
 choco upgrade partitionexpert
+choco upgrade powershell-core
+choco upgrade treesizefree
+choco upgrade usbdeview            # Nirsoft tool
 
 
 # carnac: Display keyboard strokes (for video demoing), https://github.com/Code52/carnac
