@@ -142,7 +142,7 @@ choco upgrade bluetoothview        # Nirsoft tool
 choco upgrade nettime
 choco upgrade partition-assistant-standard
 choco upgrade partitionexpert
-choco upgrade powershell-core
+choco upgrade powershell-core --install-arguments='"POWERSHELL_TELEMETRY_OPTOUT=1 ADD_FILE_CONTEXT_MENU_RUNPOWERSHELL=1 ADD_EXPLORER_CONTEXT_MENU_OPENPOWERSHELL=1 REGISTER_MANIFEST=1 USE_MU=1 ENABLE_MU=1"'
 choco upgrade treesizefree
 choco upgrade usbdeview            # Nirsoft tool
 
