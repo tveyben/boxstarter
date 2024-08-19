@@ -85,6 +85,7 @@ choco upgrade irfanview
 choco upgrade irfanview-shellextension
 choco upgrade irfanviewplugins
 # obs requires manuel handling, moved to last
+choco install mpv
 choco upgrade vlc                  --params "'/Language:en'"
 choco upgrade zeplin
 
