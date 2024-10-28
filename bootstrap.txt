@@ -102,6 +102,9 @@ choco upgrade rpi-imager
 choco upgrade rufus
 
 # vcxsrv: For WSL2 GUI, https://techcommunity.microsoft.com/t5/windows-dev-appconsult/running-wsl-gui-apps-on-windows-10/ba-p/1493242
+# 2024-10-28 TFA is gone - thank you Micro$oft
+# Go here: https://web.archive.org/web/20220129005235/https://techcommunity.microsoft.com/t5/windows-dev-appconsult/running-wsl-gui-apps-on-windows-10/ba-p/1493242
+
 #Win11 includes WSLg, thus vcxsr should no longer be required (to be tested)
 choco upgrade vcxsrv
 choco upgrade wsl2                 --params /Retry:true
