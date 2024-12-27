@@ -60,7 +60,7 @@ choco upgrade winmerge
 
 
 # FILEHANDLING
-choco install linkshellextension
+choco upgrade linkshellextension
 # BOTH the 32 bit and the 64 bit binary is installed - but in the 32 bit location (c:\Program Files (x86)\totalcmd\)
 choco upgrade totalcommander
 choco upgrade treesizefree
@@ -86,7 +86,7 @@ choco upgrade irfanview
 choco upgrade irfanview-shellextension
 choco upgrade irfanviewplugins
 # obs requires manuel handling, moved to last
-choco install mpv
+choco upgrade mpv
 choco upgrade vlc                  --params "'/Language:en'"
 choco upgrade zeplin
 
@@ -140,7 +140,8 @@ choco upgrade sumatrapdf
 choco upgrade bitwarden
 
 # SOUND
-choco install mp3tag
+choco upgrade mp3tag
+choco upgrade audacity
 
 # SYSTEM TOOLS
 choco upgrade bluetoothview        # Nirsoft tool
