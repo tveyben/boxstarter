@@ -134,6 +134,7 @@ choco upgrade charles4             # Pops up a GUI, but does not require manual 
 choco upgrade adobereader
 choco upgrade office365business
 choco upgrade sumatrapdf
+choco upgrade pdfgear
 
 
 # SECURITY
