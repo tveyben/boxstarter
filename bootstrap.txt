@@ -143,6 +143,7 @@ choco upgrade bitwarden
 # SOUND
 choco upgrade mp3tag
 choco upgrade audacity
+choco upgrade eartrumpet
 
 # SYSTEM TOOLS
 choco upgrade bluetoothview        # Nirsoft tool
