@@ -165,7 +165,9 @@ choco upgrade hwinfo
 choco upgrade smartmontools
 # samsung-magician requires manuel handling, moved to last
 choco upgrade sysinternals
+choco upgrade vnc-viewer
 choco upgrade windirstat
+
 
 
 # TEXT
